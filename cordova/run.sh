@@ -55,4 +55,3 @@ if which ios-sim >/dev/null; then
 else
     echo -e '\033[31mError: ios-sim was not found. Please download, build and install version 1.4 or greater from https://github.com/phonegap/ios-sim into your path. Or "brew install ios-sim" using homebrew: http://mxcl.github.com/homebrew/\033[m'; exit 1;
 fi
-

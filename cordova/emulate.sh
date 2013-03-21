@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#! /bin/bash
 #
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -8,19 +7,15 @@
 # to you under the Apache License, Version 2.0 (the
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
-# 
+#
 # http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing,
 # software distributed under the License is distributed on an
 # "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 #  KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-#
-
-#
-# compile and launch a Cordova/iOS project to the simulator
 #
 
 set -e
@@ -38,14 +33,22 @@ PROJECT_PATH="$(dirname "$CORDOVA_PATH")"
 XCODEPROJ=$( ls "$PROJECT_PATH" | grep .xcodeproj  )
 PROJECT_NAME=$(basename "$XCODEPROJ" .xcodeproj)
 
-cd "$PROJECT_PATH"
+APP_PATH=${1:-$PROJECT_PATH/build/$PROJECT_NAME.app}
+DEVICE_FAMILY=${2:-${DEVICE_FAMILY:-iphone}}
 
-APP=build/$PROJECT_NAME.app
-SDK=`xcodebuild -showsdks | grep Sim | tail -1 | awk '{print $6}'`
+if [ ! -d "$APP_PATH" ]; then
+	echo "Project '$APP_PATH' is not built. Building."
+    $CORDOVA_PATH/build || exit $?
+fi
 
-xcodebuild -project $PROJECT_NAME.xcodeproj -arch i386 -target $PROJECT_NAME -configuration Debug -sdk $SDK clean build VALID_ARCHS="i386" CONFIGURATION_BUILD_DIR="$PROJECT_PATH/build"
+if [ ! -d "$APP_PATH" ]; then
+	echo "$APP_PATH not found to emulate."
+	exit 1
+fi
 
-
-
-
-
+# launch using ios-sim
+if which ios-sim >/dev/null; then
+    ios-sim launch "$APP_PATH" --family "$DEVICE_FAMILY" --stderr "$CORDOVA_PATH/console.log" --stdout "$CORDOVA_PATH/console.log" &
+else
+    echo -e '\033[31mError: ios-sim was not found. Please download, build and install version 1.4 or greater from https://github.com/phonegap/ios-sim into your path. Or "brew install ios-sim" using homebrew: http://mxcl.github.com/homebrew/\033[m'; exit 1;
+fi
