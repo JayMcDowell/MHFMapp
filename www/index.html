@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>MHFMmobileApp</title>
+<meta charset= "utf-8">
+<meta name="description" content="This is a mobile app for The Musicians Hall of Fame and Museum in Nashville, TN" </>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="MHFMApp.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="MHFMApp.js"></script>
+
+<script src="bootstrap/js/bootstrap.js"></script>
+<!-- <script src="popover.js" type="text/javascript"></script> -->
+
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+					<div class="span3 boot offset2">   Musicians Hall of Fame & Museum</div>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="active">
+                <a href="About.html">About</a>
+              </li>
+              <li class="active">
+                <a href="Contact.html">Contact</a>
+              </li>
+              <li class="">
+              
+            </ul>
+    <form class="navbar-search offset5">
+    <input type="text" class="search-query" placeholder="Search">
+    </form>
+          </div>
+       
+      </div>
+    </div>  <!-- end of nav section -->
+
+
+    <!-- beginning of main page -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="row-fluid logocenter">		
+				<div id="logo">
+				  <a href="http://s1356.beta.photobucket.com/user/jaymcdowe11/media/MHFMAppLogo_zpsf94840f5.jpg.html" target="_blank"><img src="http://i1356.photobucket.com/albums/q730/jaymcdowe11/MHFMAppLogo_zpsf94840f5.jpg" id="logoHead" border="0" alt=" photo MHFMAppLogo_zpsf94840f5.jpg"/></a>
+				</div>
+		</div>  <!-- end of row-fluid -->
+	</div> <!-- end of span7 -->
+</div>  <!-- end of row -->	
+</div>  <!-- end of row-fluid -->
+
+<div class="wrapper">
+	<div class="content">
+<div class="accordion" id="accordion4">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+        INDUCTEES
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        	<a href="class1.html">
+			   Class 1
+			</a>
+      </div>
+      <div class="accordion-inner">
+       	<a href="class2.html">
+			   Class 2
+			</a>
+      </div>
+      <div class="accordion-inner">
+       	<a href="class3.html">
+			   Class 3
+			</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        EXHIBITS
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Exhibits are grouped geographically in the museum.
+    </br>
+        <div class="accordion-inner">
+          <a href="Nashville.html">
+         Nashville
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="Memphis.html">
+         Memphis
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="Atlanta.html">
+         Atlanta
+      </a>
+      </div>
+      <div class="accordion-inner">
+          <a href="Detroit.html">
+         Detroit
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="Philadelphia.html">
+         Philadelphia
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="MuscleShoals.html">
+         Muscle Shoals
+      </a>
+      </div>
+      <div class="accordion-inner">
+          <a href="LosAngeles.html">
+         Los Angeles
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="NewYork.html">
+         New York
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="Chicago.html">
+         Chicago
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="Texas.html">
+         Texas
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="Seattle.html">
+         Seattle
+      </a>
+      </div><div class="accordion-inner">
+        <a href="NewJersey.html">
+         New Jersey
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="India.html">
+         India
+      </a>
+      </div>
+      <div class="accordion-inner">
+        <a href="England.html">
+         England
+      </a>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
+        MHFM RADIO
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Featuring the inductees and </br>instruments housed in the museum
+        </br>
+        <!-- <button onclick="location.href='http://www.example.com'" id="rad"> -->
+     <button onclick="playStream()">
+     Listen to MHFM Radio
+      </button>
+
+     <!-- </button> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>	
+
+</br>
+		
+          <footer class="clearfix">
+  			<br>
+  			<p> &copy Musicians Hall of Fame & Museum 2013</p>
+  			</footer>
+
+
+</body>
+
+</html>
+	</div> <!-- end of span9 -->
