@@ -1,5 +1,5 @@
 	$(document).ready(function() {
-		
+		 $("#plyr").fitVids();
 	}); //end of doc ready
 	function playStream() {
   try {
