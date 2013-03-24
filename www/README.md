@@ -11,7 +11,7 @@ Build the HTML and CSS.  Using bootstrap, XCode and the IOS simulator, the app i
 Phase 3 -completed
 Enroll in the Apple ios Developer program.  This will allow me to test my app on multiple iphones before it goes "live".  It also enables me to push the app up the the Apple App store when it is completed.
 
-Phase 4
+Phase 4 -completed
 Enable scrolling in XCode.  Research and integrate the streaming radio content (this will consist of songs that are performed by the inductees or the instruments in the exhibits).  
 
 Phase 5
