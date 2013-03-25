@@ -14,10 +14,13 @@ Enroll in the Apple ios Developer program.  This will allow me to test my app on
 Phase 4 -completed
 Enable scrolling in XCode.  Research and integrate the streaming radio content (this will consist of songs that are performed by the inductees or the instruments in the exhibits).  
 
-Phase 5
-Update content after functionality is established.
+Phase 5 -completed
+clean up the video frames in my inductee and exhibit pages.  Used vidfit.js for this.
 
 Phase 6
+Update radio page
+
+Phase 7
 Purchase the new media blanket licenses from Ascap, BMI and SESAC for the streaming music part of the app.  
 
 
