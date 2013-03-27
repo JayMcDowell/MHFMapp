@@ -39,7 +39,9 @@ This is some info on the Cloud DJ API.
 
 Cloud DJ has a simple JSON API, you can easily start,stop and check the status of your cloud DJ by using it.
 http://open.wavepanel.net/clouddj/start/f257e0c82584d5aee8c73cacca21f22280cdeecb/ http://open.wavepanel.net/clouddj/stop/f257e0c82584d5aee8c73cacca21f22280cdeecb/ http://open.wavepanel.net/clouddj/status/f257e0c82584d5aee8c73cacca21f22280cdeecb/
+
 You can also append ?auth=API_PASSWORD_HERE to any of the above URLs to use it without filling in the form.
+
 Every request returns a JSON encoded object which has a status property, this is set to either true or false depending on the outcome of the request.
 
 

@@ -16,8 +16,34 @@
     @media (max-width: 767px) {  }
      
 /* Landscape phones and down */
-    @media (max-width: 480px) { .box{ background-color: blue;} }
+    @media (max-width: 480px) { } 
 
+
+	@media (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+/*iPad portrait*/
+}
+
+@media (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
+/*iPad landscape*/
+}
+
+@media (max-device-width: 480px)
+and (orientation: portrait) {
+/*iPhone portrait*/
+}
+
+@media (max-device-width: 480px)
+and (orientation: landscape) {
+/*iPhone landscape*/
+#stop {
+left: 470px;
+	
+}
+}
 
 body {
 	font-family: Helvetica;
@@ -282,4 +308,32 @@ background-color: #000000;
 
 .bio {
 	margin: 10px;
+}
+
+.fax {
+	position:relative;
+	top: -40px;
+	z-index: 20;
+	margin: 30px;
+	/*height: 65px;*/
+}
+
+#notes {
+	z-index: 1;
+	position:absolute;
+	top:200px;
+}
+
+#stop {
+	position:absolute;
+	top:400px;
+	left: 170px;
+	z-index: 30;
+}
+
+#copy {
+	position:absolute;
+	top:410px;
+	left: 40px;
+	z-index: 40;
 }
