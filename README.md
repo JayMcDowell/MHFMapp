@@ -19,7 +19,7 @@ Enable scrolling in XCode.  Research and integrate the streaming radio content (
 Phase 5 -completed--
 clean up the video frames in my inductee and exhibit pages.  -Used vidfit.js for this.-
 
-Phase 6
+Phase 6 -completed--
 Update splash page images and radio page.
 
 Phase 7
